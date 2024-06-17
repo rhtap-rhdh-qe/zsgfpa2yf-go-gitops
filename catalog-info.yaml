@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: zsgfpa2yf-go-gitops
+  description: This is GitOps manifest for zsgfpa2yf-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: zsgfpa2yf-go
+    janus-idp.io/tekton: zsgfpa2yf-go 
+    backstage.io/kubernetes-id: zsgfpa2yf-go 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:zsgfpa2yf-go
